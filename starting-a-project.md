@@ -58,7 +58,7 @@ the perameter, ````request````
    2) Second argument is the path to your HTML code as a string, example: ````'appName/filename.html'````
     ````
     def functionName(request):
-      return (request, 'appName/filename.html')
+      return render(request, 'appName/filename.html')
     ````
 3) Now the function will send our HTML code when requested, next step is to tell Django which URL to use in 
 this function.
