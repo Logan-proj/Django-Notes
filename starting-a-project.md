@@ -15,10 +15,9 @@ python3 manage.py migrate
 ```
 
 ## Launch Django Project
+Enter the projects directory and run ````python3 manage.py runserver````
 Runs Django project on localhost (http://127.0.0.1:8000/)
-````
-python3 manage.py runserver
-````
+
 
 ## Create a Django app
 1) Inside the project root directory, ProjectName/, create an app by running:
