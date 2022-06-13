@@ -15,9 +15,10 @@ python3 manage.py migrate
 ```
 
 ## Launch Django Project
-Enter the projects directory and run ````python3 manage.py runserver````
 Runs Django project on localhost (http://127.0.0.1:8000/)
-
+````
+python3 manage.py runserver
+````
 
 ## Create a Django app
 1) Inside the project root directory, ProjectName/, create an app by running:
@@ -41,7 +42,15 @@ your appName by including ```'appName.apps.appNameConfig'``` to the list.
     ]
     ````
 ## Create a Template
-Create a HTML template file that will be used to display your app in the browser
+In order to create templates, they have to be stored in the application in a folder called templates/. Another folder 
+needs to be created inside of this templates/ folder that uses the same name of the application.
+````
+projectname/
+ |-- appname/
+     |-- templates/
+          |-- appname/
+              |-- first_template.html
+````
 1) Create a template directories to namespace the template
    1) Inside the project app directory ````appName/````, create a folder named ````templates/````
    2) Create a folder named after your app to namespace your template:
@@ -60,6 +69,8 @@ the perameter, ````request````
     def functionName(request):
       return render(request, 'appName/filename.html')
     ````
+   ````return render()````, Rendering the template is the Django application taking the template and displaying it as 
+a normal HTML page in a web browser.
 3) Now the function will send our HTML code when requested, next step is to tell Django which URL to use in 
 this function.
    1) Create a URLconf for the new app by creating a file named ````urls.py```` inside the app directory.
